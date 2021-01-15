@@ -8,9 +8,9 @@ pip3 install git+https://github.com/keyfox/rfaparse
 
 ## Requirements
 
-  - Python 3.8+
-  - Google Cloud Platform account with Cloud Vision API enabled
-    - Set `GOOGLE_APPLICATION_CREDENTIALS` environment variable.
+- Python 3.8+
+- Google Cloud Platform account with Cloud Vision API enabled
+  - Set `GOOGLE_APPLICATION_CREDENTIALS` environment variable.
 
 ## Python script usage
 
@@ -24,8 +24,8 @@ summary = parse_summary_screen("./screenshot.jpg")
 
 # integer, "total time exercising" value in seconds.
 print(summary.time_exercising_seconds)
-# float, "total calories burnt" value in kilocalories.
-print(summary.calories_burnt_kcal)
+# float, "total calories burned" value in kilocalories.
+print(summary.calories_burned_kcal)
 # float, "total distance run" value in kilometers.
 print(summary.distance_run_km)
 
@@ -43,4 +43,3 @@ The command above is equivalent to the following Python script:
 ```python
 print(json.dumps(parse_summary_screen("./screenshot.jpg").asdict()))
 ```
-

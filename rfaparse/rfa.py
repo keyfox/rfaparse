@@ -62,7 +62,7 @@ def duration_parser(text):
 
 @extract_primary_text
 def calories_parser(text):
-    # Parse text for "total calories burnt" and return kilocalories as float.
+    # Parse text for "total calories burned" and return kilocalories as float.
     return float(text.rstrip("kcal"))
 
 
@@ -77,7 +77,7 @@ def distance_parser(text):
 # List of subjects.
 SUBJECTS = [
     OCRSubject("time_exercising_seconds", row_region(274), duration_parser),
-    OCRSubject("calories_burnt_kcal", row_region(394), calories_parser),
+    OCRSubject("calories_burned_kcal", row_region(394), calories_parser),
     OCRSubject("distance_run_km", row_region(500), distance_parser),
 ]
 
