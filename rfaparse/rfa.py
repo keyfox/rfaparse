@@ -45,7 +45,7 @@ def extract_primary_text(func):
     @functools.wraps(func)
     def wrapper(vision_response):
         result = vision_response.text_annotations[0]
-        primary_text = result.description.strip()
+        primary_text = result.description.split("\n")[0].strip()
         return func(primary_text)
 
     return wrapper
